@@ -83,22 +83,22 @@ How to Insert Checkpoints -
 
 VB Scripting - 
 
-Dim Before, After
-SystemUtil.Run "C:\Program Files\HP... exe"
-Before = WpfWindow("HP MyFlight Sample Application").WpfButton("OK").GetROProperty("enabled")
+   Dim Before, After
+   SystemUtil.Run "C:\Program Files\HP... exe"
+   Before = WpfWindow("HP MyFlight Sample Application").WpfButton("OK").GetROProperty("enabled")
 
-If Before = False Then
-Reporter.ReportEven micPass or 0, "Result 1", "OK button is in disabled state"
-Else
-Reporter.ReportEvent micFail or 1, "Result 1", "OK button is in enabled state" 
-End If
+   If Before = False Then
+   Reporter.ReportEven micPass or 0, "Result 1", "OK button is in disabled state"
+   Else
+   Reporter.ReportEvent micFail or 1, "Result 1", "OK button is in enabled state" 
+   End If
 
-WpfWindow("HP MyFlight Sample Application").WpfEdit("agentName").Set "john"
-WpfWindow("HP MyFlight Sample Application").WpfEdit("password").SetSecure "232233222e3"
+   WpfWindow("HP MyFlight Sample Application").WpfEdit("agentName").Set "john"
+   WpfWindow("HP MyFlight Sample Application").WpfEdit("password").SetSecure "232233222e3"
 
-If After = True Then
-Reporter.ReportEven micPass or 0, "Result 2", "OK button is in enabled state"
-Else
-Reporter.ReportEvent micFail or 1, "Result 2", "OK button is in disabled state" 
-End If
+   If After = True Then
+   Reporter.ReportEven micPass or 0, "Result 2", "OK button is in enabled state"
+   Else
+   Reporter.ReportEvent micFail or 1, "Result 2", "OK button is in disabled state" 
+   End If
 
